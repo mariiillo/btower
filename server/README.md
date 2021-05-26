@@ -1,24 +1,27 @@
-# README
+# Echo server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app will allow you to mock your endpoints
 
-Things you may want to cover:
+##Project setup
 
-* Ruby version
+* Database
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+`bundle exec rake db:setup`
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+`bundle exec rspec`
 
-* Deployment instructions
+* How to run the app
 
-* ...
+`bundle exec rails server`
+
+##Functionality
+
+###Create endpoint
+
+###Update endpoint
+
+###Delete endpoint
+
+###List endpoints
