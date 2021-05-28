@@ -2,3 +2,4 @@
 server/vendor
 server/tmp
 server/log
+server/.byebug_history
