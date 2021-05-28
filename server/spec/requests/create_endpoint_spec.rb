@@ -4,7 +4,7 @@ require 'rails_helper'
 
 describe 'Create Endpoint' do
   context 'with valid params' do
-    it 'creates a new endpoint and return it serialized' do
+    it 'creates a new endpoint and returns it serialized' do
       headers = {
         'Content-Type': 'application/vnd.api+json',
         'Accept': 'application/vnd.api+json'
@@ -46,7 +46,7 @@ describe 'Create Endpoint' do
   end
 
   context 'with invalid params' do
-    it 'does not create an endpoint and return errors' do
+    it 'does not create an endpoint and returns errors' do
       create(:endpoint, verb: 'GET', path: '/greeting')
       headers = {
         'Content-Type': 'application/vnd.api+json',

@@ -43,4 +43,18 @@ describe Endpoint do
       end
     end
   end
+
+  context 'after_create callback' do
+    describe "#register_route" do
+      it "register a new route based on the created endpoint" do
+
+      end
+    end
+  end
+
+  context 'after_destroy callback' do
+    describe "#unregister_route" do
+
+    end
+  end
 end
