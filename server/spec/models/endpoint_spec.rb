@@ -45,16 +45,14 @@ describe Endpoint do
   end
 
   context 'after_create callback' do
-    describe "#register_route" do
-      it "register a new route based on the created endpoint" do
+    describe '#register_route' do
+      it 'register a new route based on the created endpoint' do
+        action = -> { create(:endpoint, verb: 'POST', path: '/my/custom/route') }
 
+        expect(action).to change(Server::Application.routes.set, :count).by(1)
+        expect(Server::Application.routes.set.last.verb).to eq 'POST'
+        expect(Server::Application.routes.set.last.format(format: nil)).to eq '/my/custom/route'
       end
-    end
-  end
-
-  context 'after_destroy callback' do
-    describe "#unregister_route" do
-
     end
   end
 end

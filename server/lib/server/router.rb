@@ -8,6 +8,8 @@ module Server
       end
 
       def load_endpoint_routes!
+        return unless ActiveRecord::Base.connection.table_exists? 'endpoints'
+
         Endpoint.find_each do |endpoint|
           define_route endpoint
         end
