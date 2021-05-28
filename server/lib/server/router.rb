@@ -23,7 +23,7 @@ module Server
           send(
             endpoint.verb.downcase,
             endpoint.path,
-            to: 'endpoints#serve',
+            to: 'endpoints#serve'
           )
         end
       end
