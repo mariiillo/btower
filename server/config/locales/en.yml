@@ -12,3 +12,5 @@ en:
         detail: "Requested Endpoint with ID '%{id}' does not exist"
       invalid_resource:
         detail: "Requested Resource '%{resource}' does not exist"
+  errors:
+    route_not_found: "Requested page '%{route}' does not exist"
