@@ -69,24 +69,16 @@ describe 'Create Endpoint' do
       expected_response = {
         "errors": [
           {
-            'code': '100',
+            'code': 'unprocessable_entity',
             'detail': 'path - has already been taken',
-            'source': {
-              'pointer': '/data/attributes/path'
-            },
-            'status': '422',
-            'title': 'has already been taken'
+            'status': '422'
           },
           {
-            "code": '100',
+            "code": 'unprocessable_entity',
             "detail": 'response - invalid format',
-            "source": {
-              "pointer": '/data/attributes/response'
-            },
-            "status": '422',
-            "title": 'invalid format'
+            "status": '422'
           }
-        ],
+        ]
       }.as_json
 
       action = -> { post '/endpoints', params: params, headers: headers }

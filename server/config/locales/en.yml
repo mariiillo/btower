@@ -6,3 +6,9 @@ en:
           attributes:
             response:
               invalid_json: invalid format
+  jsonapi-resources:
+    exceptions:
+      record_not_found:
+        detail: "Requested Endpoint with ID '%{id}' does not exist"
+      invalid_resource:
+        detail: "Requested Resource '%{resource}' does not exist"

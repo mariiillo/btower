@@ -21,9 +21,8 @@ describe 'Delete Endpoint' do
       expected_response = {
         "errors": [
           {
-            "title": 'Record not found',
-            "detail": 'The record identified by 12 could not be found.',
-            "code": '404',
+            "detail": "Requested Endpoint with ID '12' does not exist",
+            "code": 'not_found',
             "status": '404'
           }
         ]

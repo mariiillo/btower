@@ -75,11 +75,9 @@ describe 'Update Endpoint' do
       expected_response = {
         "errors": [
           {
-            "code": '100',
+            "code": 'unprocessable_entity',
             "detail": 'response - invalid format',
-            "source": { 'pointer': '/data/attributes/response' },
-            "status": '422',
-            "title": 'invalid format'
+            "status": '422'
           }
         ]
       }.as_json
@@ -115,10 +113,9 @@ describe 'Update Endpoint' do
       expected_response = {
         "errors": [
           {
-            "code": '404',
-            "detail": 'The record identified by 12 could not be found.',
-            "status": '404',
-            "title": 'Record not found'
+            "code": 'not_found',
+            "detail": "Requested Endpoint with ID '12' does not exist",
+            "status": '404'
           }
         ]
       }.as_json
